@@ -7,7 +7,7 @@ import 'package:simple_chopper_example/src/home/model/item_list_model.dart';
 
 @module
 abstract class ChopperModule {
-  String get baseUrl => 'BASE-URL-HERE';
+  String get baseUrl => 'https://63c99b74c3e2021b2d5b0698.mockapi.io';
 
   @lazySingleton
   ChopperClient chopperBuilder() => ChopperClient(

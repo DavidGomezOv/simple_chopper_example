@@ -9,6 +9,6 @@ final locator = GetIt.instance;
   preferRelativeImports: false,
   initializerName: r'$appInitGetIt',
 )
-void configure() => locator.$appInitGetIt();
+void configureGetIt() => locator.$appInitGetIt();
 
 final bottomSheetService = locator<BottomSheetService>();

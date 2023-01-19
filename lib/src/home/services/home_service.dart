@@ -16,6 +16,7 @@ class HomeService extends BaseReactiveService {
   HomeService.from(this._repository) {
     listenToReactiveValues([
       loadingReactiveValue,
+      itemListValue,
     ]);
   }
 

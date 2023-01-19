@@ -12,7 +12,7 @@ class RequestJsonConverter implements Converter {
   FutureOr<Request> convertRequest(Request request) {
     if (request.multipart) return request;
     final req =
-    applyHeader(request, contentTypeKey, jsonHeaders, override: false);
+        applyHeader(request, contentTypeKey, jsonHeaders, override: false);
     return _encodeJson(req);
   }
 

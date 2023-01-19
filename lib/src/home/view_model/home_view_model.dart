@@ -11,8 +11,12 @@ class HomeViewModel extends AppBaseViewModel {
 
   bool get loading => _homeService.loadingReactiveValue.value;
 
+  HomeViewModel() {
+    getItemList();
+  }
+
   @override
-  List<ListenableServiceMixin> get listenableServices => [
+  List<ReactiveServiceMixin> get reactiveServices => [
         _homeService,
       ];
 
