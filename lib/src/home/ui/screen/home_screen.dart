@@ -11,20 +11,22 @@ class HomeScreen extends StatelessWidget {
     return ViewModelBuilder<HomeViewModel>.reactive(
       viewModelBuilder: () => HomeViewModel(),
       builder: (context, viewModel, child) => Scaffold(
+        appBar: AppBar(
+          title: const Text('Flutter Chopper Example'),
+        ),
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(
-              20.0,
+            padding: const EdgeInsets.symmetric(
+              vertical: 10.0,
             ),
             child: Column(
               children: [
-                const Text('Flutter Chopper Example'),
-                const SizedBox(height: 10,),
                 Expanded(
                   child: ListView.builder(
                     itemCount: viewModel.itemList.length,
                     itemBuilder: (context, index) => ItemListWidget(
                       item: viewModel.itemList[index],
+                      onTap: () {},
                     ),
                   ),
                 ),
